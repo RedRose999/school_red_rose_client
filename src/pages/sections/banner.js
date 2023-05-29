@@ -1,26 +1,28 @@
 import { Box, Flex, Image, Container, Heading, Text, Input, Button } from 'theme-ui'
 
 import React from 'react'
-
 import VideoBtn from '../../@core/components/video-btn'
 import { FaStar } from 'react-icons/fa'
 import { IoIosSearch } from 'react-icons/io'
-
+import HeroSlider from '../sections/HeroSlider'
 import BannerBG from '@/assets/home/banner-bg-1-1.png'
 import BannerTextLine from '@/assets/home/banner-text-line.png'
 import BannerPattern from '@/assets/home/banner-pattern.png'
 import BannerImage from '@/assets/home/banner-image-1.png'
 
 const Banner = () => {
-  return (
+
+return(
+  
     <Box as='section' id='banner' sx={styles.banner}>
       <Container sx={styles.banner.container}>
         <Flex sx={styles.banner.row}>
           <Box sx={styles.banner.col}>
             <Box sx={styles.banner.content}>
               <Heading as='h3'>
-                Learn Design <br />
-                with Nia Matos
+                "Empowering<br />
+                tomorrow's Leaders"<br />
+                with Quality Education
               </Heading>
               <Text as='p'>
                 Get your blood tests delivered at let home collect sample <br />
@@ -32,14 +34,57 @@ const Banner = () => {
           <Box sx={styles.banner.col}>
             <Box sx={styles.banner.imageBox}>
               <Box sx={styles.banner.imageInner}>
-                <Image src={BannerImage.src} alt='banner image' />
+                {/* <Image src={BannerImage.src} alt='banner image' /> */}
+                <HeroSlider sx = {styles.HeroSlider}/>
               </Box>
             </Box>
           </Box>
         </Flex>
       </Container>
     </Box>
+  
   )
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // return (
+  //   <Box as='section' id='banner' sx={styles.banner}>
+  //     <Container sx={styles.banner.container}>
+  //       <Flex sx={styles.banner.row}>
+  //         <Box sx={styles.banner.col}>
+  //           <Box sx={styles.banner.content}>
+  //             <Heading as='h3'>
+  //               Learn Design <br />
+  //               with Nia Matos
+  //             </Heading>
+  //             <Text as='p'>
+  //               Get your blood tests delivered at let home collect sample <br />
+  //               from the victory of the managments that supplies best <br />
+  //               design system guidelines ever.
+  //             </Text>
+  //           </Box>
+  //         </Box>
+  //         <Box sx={styles.banner.col}>
+  //           <Box sx={styles.banner.imageBox}>
+  //             <Box sx={styles.banner.imageInner}>
+  //               <Image src={BannerImage.src} alt='banner image' />
+  //             </Box>
+  //           </Box>
+  //         </Box>
+  //       </Flex>
+  //     </Container>
+  //   </Box>
+  // )
 }
 
 export default Banner
@@ -55,6 +100,10 @@ const styles = {
     container: {
       maxWidth: ['100%', null, null, null, null, '1240px', '1440px']
     },
+    HeroSlider: {
+      z_index: 10000
+    },
+
     row: {
       flexWrap: 'wrap',
       display: 'flex',
